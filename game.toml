@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Alien Resurrection"
+id = "SLES-02913"
+players = 1
+exe = "disc/SLES_029.13"
+disc = "disc/Alien Resurrection (Europe) (En,Fr,De,Es,It).cue"
+load_address = "0x00010000"
+entry_pc = "0x00015FA0"
+text_size = "0x00014800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Alien Resurrection (Europe) (En,Fr,De,Es,It) (Track 1).bin"
+cue_name = "Alien Resurrection (Europe) (En,Fr,De,Es,It).cue"
+boot_exe = "SLES_029.13"
+known_sizes = [503850144]
+known_md5 = [
+  "e4aa0eb1fe90b576cfa5850f19a31f5b",
+]
+known_sha1 = [
+  "5642c4f4ba6f06323778ae29c59c6dc863d49f55",
+]
+known_crc32 = [
+  "03e470ae",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+strict = true
+
+[runtime]
+window_title = "Alien Resurrection Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 4
+required_disc_fp = "658af9809b8fdafcb0d060036cc37b2692723aa1e04d1be07fcba173162e5299"

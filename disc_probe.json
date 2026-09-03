@@ -1,0 +1,29 @@
+{
+  "cue_name": "Alien Resurrection (Europe) (En,Fr,De,Es,It).cue",
+  "bin_name": "Alien Resurrection (Europe) (En,Fr,De,Es,It) (Track 1).bin",
+  "track_count": 4,
+  "data_track_size": 503850144,
+  "data_track_md5": "e4aa0eb1fe90b576cfa5850f19a31f5b",
+  "data_track_sha1": "5642c4f4ba6f06323778ae29c59c6dc863d49f55",
+  "data_track_sha256": "af3da8902c6d3f55aaeff960adbeda61c7a630e820e34bc133ffe972cd100237",
+  "data_track_crc32": "03e470ae",
+  "boot_exe": "SLES_029.13",
+  "serial": "SLES-02913",
+  "serial_exe": "SLES_029.13",
+  "volume_id": "ALIEN_RESURRECTION",
+  "display_name": "Alien Resurrection",
+  "load_address": "0x00010000",
+  "entry_pc": "0x00015FA0",
+  "text_size": "0x00014800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "658af9809b8fdafcb0d060036cc37b2692723aa1e04d1be07fcba173162e5299",
+  "boot_exe_sha256": "0cf68cfc2042496f44e386060d99c25aa05c17cb8b378707166305b527d15f64",
+  "seed_count": 276,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
